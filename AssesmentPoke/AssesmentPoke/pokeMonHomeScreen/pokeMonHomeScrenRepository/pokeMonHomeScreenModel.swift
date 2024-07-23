@@ -7,3 +7,8 @@
 
 import Foundation
 
+struct pokeMonHomeModel : Codable {
+    
+    let name: String
+    let url: String
+}

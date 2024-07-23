@@ -88,11 +88,11 @@
 		45C541762C4FABEC007E2D9C /* pokeMonHomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				45C541792C4FAC36007E2D9C /* pokeMonHomeScrenRepository */,
 				45C541842C4FB3CD007E2D9C /* pokeMonHomeScreenTableViewCell */,
 				45C5417E2C4FACC8007E2D9C /* pokeMonHomeScreenViewController.swift */,
 				45C541822C4FACFC007E2D9C /* pokeMonHomeScreen.storyboard */,
 				45C541802C4FACE0007E2D9C /* pokeMonHomeScreenViewModel.swift */,
-				45C541792C4FAC36007E2D9C /* pokeMonHomeScrenRepository */,
 			);
 			path = pokeMonHomeScreen;
 			sourceTree = "<group>";
