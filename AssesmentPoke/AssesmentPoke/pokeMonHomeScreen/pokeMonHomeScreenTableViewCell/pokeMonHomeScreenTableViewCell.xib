@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="274" id="DSE-6B-pEX">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="274" id="DSE-6B-pEX" customClass="pokeHomeScreenTableViewCellViewController">
             <rect key="frame" x="0.0" y="0.0" width="238" height="274"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DSE-6B-pEX" id="fCT-VT-dYl">
@@ -35,6 +35,10 @@
                     <constraint firstItem="Qmf-dn-smJ" firstAttribute="leading" secondItem="fCT-VT-dYl" secondAttribute="leading" constant="47" id="qJK-2b-8m7"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="pokeMonCard" destination="Qmf-dn-smJ" id="5Hj-tp-yrg"/>
+                <outlet property="pokeMonName" destination="a6Y-67-cyd" id="Ocm-Kg-eFO"/>
+            </connections>
             <point key="canvasLocation" x="157.25190839694656" y="-54.225352112676056"/>
         </tableViewCell>
     </objects>
