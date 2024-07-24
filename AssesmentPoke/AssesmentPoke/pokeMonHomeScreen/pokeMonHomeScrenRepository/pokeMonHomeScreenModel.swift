@@ -8,6 +8,7 @@
 import Foundation
 
 struct pokeMonHomeModel : Codable {
+    
     let results: [results]
 }
 

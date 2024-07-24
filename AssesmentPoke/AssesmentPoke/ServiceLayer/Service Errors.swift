@@ -7,13 +7,14 @@
 
 import Foundation
 
-enum APIError: String, Error {
+enum Errors {
+    
     case internalError
     case parsingError
-    case serverError
+    case serviceError
 }
 
-enum Method {
+enum APIErrors {
     case GET
     case POST
 }
