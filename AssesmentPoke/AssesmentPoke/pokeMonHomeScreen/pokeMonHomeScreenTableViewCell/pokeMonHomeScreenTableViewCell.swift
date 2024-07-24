@@ -7,7 +7,7 @@
 
 import UIKit
 
-class pokeMonHomeScreenTableViewCellViewController: UIViewController {
+class pokeMonHomeScreenTableViewCell: UIViewController {
 
    
     @IBOutlet weak var pokeMonCard: UIImageView!
