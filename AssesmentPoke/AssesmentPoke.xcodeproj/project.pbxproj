@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		455D498A2C50F69E00CC0D4B /* pokeMonHomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455D49872C50F69E00CC0D4B /* pokeMonHomeScreenViewController.swift */; };
+		455D498B2C50F69E00CC0D4B /* pokeMonHomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455D49882C50F69E00CC0D4B /* pokeMonHomeScreenViewModel.swift */; };
+		455D498F2C50F6BE00CC0D4B /* pokeMonHomeScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455D498D2C50F6BE00CC0D4B /* pokeMonHomeScreenTableViewCell.swift */; };
+		455D49922C50F6D500CC0D4B /* pokeMonHomeScreenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455D49902C50F6D500CC0D4B /* pokeMonHomeScreenRepository.swift */; };
+		455D49932C50F6D500CC0D4B /* pokeMonHomeScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455D49912C50F6D500CC0D4B /* pokeMonHomeScreenModel.swift */; };
+		455D499B2C5117A500CC0D4B /* pokeMonHomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455D49992C5117A500CC0D4B /* pokeMonHomeScreen.storyboard */; };
+		455D499D2C5117DF00CC0D4B /* pokeMonHomeScreenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455D499C2C5117DF00CC0D4B /* pokeMonHomeScreenTableViewCell.xib */; };
+		455D49D22C524EA400CC0D4B /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455D49D12C524EA400CC0D4B /* ImageViewExtension.swift */; };
+		455D49D62C526D8C00CC0D4B /* pokeMonDetailsScreenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455D49D52C526D8C00CC0D4B /* pokeMonDetailsScreenRepository.swift */; };
+		455D49D82C526DA300CC0D4B /* pokeMonDetailsScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455D49D72C526DA300CC0D4B /* pokeMonDetailsScreenModel.swift */; };
+		455D49DB2C526DF500CC0D4B /* pokeMonDetailsScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455D49DA2C526DF500CC0D4B /* pokeMonDetailsScreenTableViewCell.swift */; };
+		455D49DD2C526E1400CC0D4B /* pokeMonDetailsScreenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455D49DC2C526E1400CC0D4B /* pokeMonDetailsScreenTableViewCell.xib */; };
+		455D49DF2C526E3600CC0D4B /* pokeMonDetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455D49DE2C526E3600CC0D4B /* pokeMonDetailsScreenViewController.swift */; };
+		455D49E12C526E5200CC0D4B /* pokeMonDetailsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455D49E02C526E5200CC0D4B /* pokeMonDetailsScreenViewModel.swift */; };
+		455D49E32C526E6A00CC0D4B /* pokeMonDetailsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455D49E22C526E6A00CC0D4B /* pokeMonDetailsScreen.storyboard */; };
 		45C541512C4F99CE007E2D9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C541502C4F99CE007E2D9C /* AppDelegate.swift */; };
 		45C541532C4F99CE007E2D9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C541522C4F99CE007E2D9C /* SceneDelegate.swift */; };
 		45C541552C4F99CE007E2D9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C541542C4F99CE007E2D9C /* ViewController.swift */; };
@@ -14,9 +29,27 @@
 		45C5415B2C4F99CE007E2D9C /* AssesmentPoke.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45C541592C4F99CE007E2D9C /* AssesmentPoke.xcdatamodeld */; };
 		45C5415D2C4F99D0007E2D9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C5415C2C4F99D0007E2D9C /* Assets.xcassets */; };
 		45C541602C4F99D0007E2D9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45C5415E2C4F99D0007E2D9C /* LaunchScreen.storyboard */; };
+		45C541712C4F9E7F007E2D9C /* Service Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C541702C4F9E7F007E2D9C /* Service Errors.swift */; };
+		45C541732C4F9E89007E2D9C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C541722C4F9E89007E2D9C /* Constants.swift */; };
+		45C541752C4F9E98007E2D9C /* API Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C541742C4F9E98007E2D9C /* API Handler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		455D49872C50F69E00CC0D4B /* pokeMonHomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = pokeMonHomeScreenViewController.swift; path = pokeMonHomeScreen/pokeMonHomeScreenViewController.swift; sourceTree = "<group>"; };
+		455D49882C50F69E00CC0D4B /* pokeMonHomeScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = pokeMonHomeScreenViewModel.swift; path = pokeMonHomeScreen/pokeMonHomeScreenViewModel.swift; sourceTree = "<group>"; };
+		455D498D2C50F6BE00CC0D4B /* pokeMonHomeScreenTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pokeMonHomeScreenTableViewCell.swift; sourceTree = "<group>"; };
+		455D49902C50F6D500CC0D4B /* pokeMonHomeScreenRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pokeMonHomeScreenRepository.swift; sourceTree = "<group>"; };
+		455D49912C50F6D500CC0D4B /* pokeMonHomeScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pokeMonHomeScreenModel.swift; sourceTree = "<group>"; };
+		455D49992C5117A500CC0D4B /* pokeMonHomeScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = pokeMonHomeScreen.storyboard; path = "../../../../../../../Downloads/pokeMon-feature-pokeMonHomeScreen/AssesmentPoke/AssesmentPoke/pokeMonHomeScreen/pokeMonHomeScreen.storyboard"; sourceTree = "<group>"; };
+		455D499C2C5117DF00CC0D4B /* pokeMonHomeScreenTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = pokeMonHomeScreenTableViewCell.xib; sourceTree = "<group>"; };
+		455D49D12C524EA400CC0D4B /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
+		455D49D52C526D8C00CC0D4B /* pokeMonDetailsScreenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pokeMonDetailsScreenRepository.swift; sourceTree = "<group>"; };
+		455D49D72C526DA300CC0D4B /* pokeMonDetailsScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pokeMonDetailsScreenModel.swift; sourceTree = "<group>"; };
+		455D49DA2C526DF500CC0D4B /* pokeMonDetailsScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pokeMonDetailsScreenTableViewCell.swift; sourceTree = "<group>"; };
+		455D49DC2C526E1400CC0D4B /* pokeMonDetailsScreenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = pokeMonDetailsScreenTableViewCell.xib; sourceTree = "<group>"; };
+		455D49DE2C526E3600CC0D4B /* pokeMonDetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pokeMonDetailsScreenViewController.swift; sourceTree = "<group>"; };
+		455D49E02C526E5200CC0D4B /* pokeMonDetailsScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pokeMonDetailsScreenViewModel.swift; sourceTree = "<group>"; };
+		455D49E22C526E6A00CC0D4B /* pokeMonDetailsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = pokeMonDetailsScreen.storyboard; sourceTree = "<group>"; };
 		45C5414D2C4F99CE007E2D9C /* AssesmentPoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssesmentPoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C541502C4F99CE007E2D9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45C541522C4F99CE007E2D9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +59,9 @@
 		45C5415C2C4F99D0007E2D9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45C5415F2C4F99D0007E2D9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45C541612C4F99D0007E2D9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45C541702C4F9E7F007E2D9C /* Service Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Service Errors.swift"; sourceTree = "<group>"; };
+		45C541722C4F9E89007E2D9C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		45C541742C4F9E98007E2D9C /* API Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Handler.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +75,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		455D497B2C50DF5C00CC0D4B /* pokeMonHome */ = {
+			isa = PBXGroup;
+			children = (
+				455D49882C50F69E00CC0D4B /* pokeMonHomeScreenViewModel.swift */,
+				455D49872C50F69E00CC0D4B /* pokeMonHomeScreenViewController.swift */,
+				455D49992C5117A500CC0D4B /* pokeMonHomeScreen.storyboard */,
+				455D49952C50F70E00CC0D4B /* pokeMonHomeScreenRepository */,
+				455D49942C50F6E200CC0D4B /* pokeMonHomeScreenTableViewCell */,
+			);
+			path = pokeMonHome;
+			sourceTree = "<group>";
+		};
+		455D49942C50F6E200CC0D4B /* pokeMonHomeScreenTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				455D499C2C5117DF00CC0D4B /* pokeMonHomeScreenTableViewCell.xib */,
+				455D498D2C50F6BE00CC0D4B /* pokeMonHomeScreenTableViewCell.swift */,
+			);
+			name = pokeMonHomeScreenTableViewCell;
+			sourceTree = "<group>";
+		};
+		455D49952C50F70E00CC0D4B /* pokeMonHomeScreenRepository */ = {
+			isa = PBXGroup;
+			children = (
+				455D49912C50F6D500CC0D4B /* pokeMonHomeScreenModel.swift */,
+				455D49902C50F6D500CC0D4B /* pokeMonHomeScreenRepository.swift */,
+			);
+			name = pokeMonHomeScreenRepository;
+			sourceTree = "<group>";
+		};
+		455D49D02C524E7700CC0D4B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				455D49D12C524EA400CC0D4B /* ImageViewExtension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		455D49D32C526D0100CC0D4B /* pokeMonDetails */ = {
+			isa = PBXGroup;
+			children = (
+				455D49D92C526DBA00CC0D4B /* pokeMonDetailsScreenTableViewCell */,
+				455D49D42C526D3200CC0D4B /* pokeMonDetailsScreenRepository */,
+				455D49DE2C526E3600CC0D4B /* pokeMonDetailsScreenViewController.swift */,
+				455D49E02C526E5200CC0D4B /* pokeMonDetailsScreenViewModel.swift */,
+				455D49E22C526E6A00CC0D4B /* pokeMonDetailsScreen.storyboard */,
+			);
+			name = pokeMonDetails;
+			sourceTree = "<group>";
+		};
+		455D49D42C526D3200CC0D4B /* pokeMonDetailsScreenRepository */ = {
+			isa = PBXGroup;
+			children = (
+				455D49D72C526DA300CC0D4B /* pokeMonDetailsScreenModel.swift */,
+				455D49D52C526D8C00CC0D4B /* pokeMonDetailsScreenRepository.swift */,
+			);
+			name = pokeMonDetailsScreenRepository;
+			sourceTree = "<group>";
+		};
+		455D49D92C526DBA00CC0D4B /* pokeMonDetailsScreenTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				455D49DA2C526DF500CC0D4B /* pokeMonDetailsScreenTableViewCell.swift */,
+				455D49DC2C526E1400CC0D4B /* pokeMonDetailsScreenTableViewCell.xib */,
+			);
+			name = pokeMonDetailsScreenTableViewCell;
+			sourceTree = "<group>";
+		};
 		45C541442C4F99CE007E2D9C = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +162,10 @@
 		45C5414F2C4F99CE007E2D9C /* AssesmentPoke */ = {
 			isa = PBXGroup;
 			children = (
+				455D49D02C524E7700CC0D4B /* Helpers */,
+				45C5416F2C4F9E60007E2D9C /* ServiceLayer */,
+				455D497B2C50DF5C00CC0D4B /* pokeMonHome */,
+				455D49D32C526D0100CC0D4B /* pokeMonDetails */,
 				45C541502C4F99CE007E2D9C /* AppDelegate.swift */,
 				45C541522C4F99CE007E2D9C /* SceneDelegate.swift */,
 				45C541542C4F99CE007E2D9C /* ViewController.swift */,
@@ -68,6 +176,16 @@
 				45C541592C4F99CE007E2D9C /* AssesmentPoke.xcdatamodeld */,
 			);
 			path = AssesmentPoke;
+			sourceTree = "<group>";
+		};
+		45C5416F2C4F9E60007E2D9C /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				45C541702C4F9E7F007E2D9C /* Service Errors.swift */,
+				45C541722C4F9E89007E2D9C /* Constants.swift */,
+				45C541742C4F9E98007E2D9C /* API Handler.swift */,
+			);
+			path = ServiceLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +248,10 @@
 			files = (
 				45C541602C4F99D0007E2D9C /* LaunchScreen.storyboard in Resources */,
 				45C5415D2C4F99D0007E2D9C /* Assets.xcassets in Resources */,
+				455D499B2C5117A500CC0D4B /* pokeMonHomeScreen.storyboard in Resources */,
+				455D499D2C5117DF00CC0D4B /* pokeMonHomeScreenTableViewCell.xib in Resources */,
+				455D49E32C526E6A00CC0D4B /* pokeMonDetailsScreen.storyboard in Resources */,
+				455D49DD2C526E1400CC0D4B /* pokeMonDetailsScreenTableViewCell.xib in Resources */,
 				45C541582C4F99CE007E2D9C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,10 +263,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				455D49932C50F6D500CC0D4B /* pokeMonHomeScreenModel.swift in Sources */,
+				455D49E12C526E5200CC0D4B /* pokeMonDetailsScreenViewModel.swift in Sources */,
 				45C5415B2C4F99CE007E2D9C /* AssesmentPoke.xcdatamodeld in Sources */,
+				455D498A2C50F69E00CC0D4B /* pokeMonHomeScreenViewController.swift in Sources */,
+				455D498B2C50F69E00CC0D4B /* pokeMonHomeScreenViewModel.swift in Sources */,
+				455D49DB2C526DF500CC0D4B /* pokeMonDetailsScreenTableViewCell.swift in Sources */,
+				455D49922C50F6D500CC0D4B /* pokeMonHomeScreenRepository.swift in Sources */,
+				455D498F2C50F6BE00CC0D4B /* pokeMonHomeScreenTableViewCell.swift in Sources */,
+				455D49D22C524EA400CC0D4B /* ImageViewExtension.swift in Sources */,
 				45C541552C4F99CE007E2D9C /* ViewController.swift in Sources */,
+				455D49DF2C526E3600CC0D4B /* pokeMonDetailsScreenViewController.swift in Sources */,
 				45C541512C4F99CE007E2D9C /* AppDelegate.swift in Sources */,
+				455D49D82C526DA300CC0D4B /* pokeMonDetailsScreenModel.swift in Sources */,
+				45C541712C4F9E7F007E2D9C /* Service Errors.swift in Sources */,
+				455D49D62C526D8C00CC0D4B /* pokeMonDetailsScreenRepository.swift in Sources */,
 				45C541532C4F99CE007E2D9C /* SceneDelegate.swift in Sources */,
+				45C541732C4F9E89007E2D9C /* Constants.swift in Sources */,
+				45C541752C4F9E98007E2D9C /* API Handler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
