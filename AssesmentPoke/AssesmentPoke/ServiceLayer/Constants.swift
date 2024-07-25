@@ -17,5 +17,5 @@ struct Endpoint {
 }
 
 struct TableViewIdentifiers {
-    static let homeScreenIdentifier = "pokemonHomeScreenTableViewCell"
+    static let homeScreenIdentifier = "pokeMonHomeScreenTableViewCell"
 }
