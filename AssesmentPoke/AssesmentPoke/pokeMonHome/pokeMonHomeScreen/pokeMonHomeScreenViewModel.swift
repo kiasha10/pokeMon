@@ -45,6 +45,27 @@ class PokemonHomeScreenViewModel {
             }
         }
     }
+    
+    private func extractPokemonID(from url: String) -> String? {
+        let components = url.split(separator: "/")
+        return components.count > 1 ?
+        String(components[components.count - 2]) : nil
+    }
+    
+    private func constructGitHubImageURL(with pokemonID: String) -> String {
+//        print("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(pokemonID).png")
+        return "https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/\(pokemonID).png"
+    }
+    func githubImageURL(for index: Int) -> String? {
+        guard index < results.count else { return nil }
+        let pokemon = results[index]
+        if let pokemonID = extractPokemonID(from: pokemon.url)
+        {
+            print(pokemonID)
+            return constructGitHubImageURL(with: pokemonID)
+        }
+        return nil
+    }
 }
 
 
