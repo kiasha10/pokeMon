@@ -7,22 +7,22 @@
 
 import UIKit
 
-class pokeMonHomeScreenTableViewCell: UITableViewCell {
+class PokemonHomeScreenTableViewCell: UITableViewCell {
 
    
-    @IBOutlet private weak var pokeMon: UIImageView!
-    @IBOutlet private weak var pokeMonName: UILabel!
+    @IBOutlet private weak var pokemonImageView: UIImageView!
+    @IBOutlet private weak var pokemonNameLabel: UILabel!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configure(pokeMonNames: pokeMonHomeModel ) {
-        pokeMonName.text = "\(pokeMonNames.results)"
+    func configure(pokemon: PokemonResult ) {
+        pokemonNameLabel.text = pokemon.name
     }
     
     static func tableViewNib() -> UINib {
-        UINib(nibName: "PokeMonCard", bundle: nil)
+        UINib(nibName: TableViewIdentifiers.homeScreenIdentifier, bundle: nil)
     }
 }

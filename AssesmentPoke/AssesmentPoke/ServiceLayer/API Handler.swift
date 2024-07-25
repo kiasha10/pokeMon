@@ -26,6 +26,15 @@ class APIHandler {
         call(with: request, completion: completion)
     }
     
+    func fetchPokemonNames(completion: @escaping (Result<PokemonHomeModel, Error>) -> Void) {
+        let url = URL(string: "https://pokeapi.co/api/v2/pokemon?offset=0&limit=100")!
+        let task = URLSession.shared.dataTask(with: url) { date, response, error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+        }
+    }
     private func call<T: Codable>(with request: URLRequest, completion: @escaping ((Result<T, APIError>)-> Void)) {
         let dataTask = URLSession.shared.dataTask(with: request) {data, _, error in
             guard error == nil else {

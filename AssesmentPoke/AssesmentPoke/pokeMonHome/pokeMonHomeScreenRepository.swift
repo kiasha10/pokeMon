@@ -7,19 +7,16 @@
 
 import Foundation
 
-typealias pokeMonHomeScreenResult = (Result<[pokeMonHomeModel], APIError>) -> Void
+typealias PokemonHomeScreenResult = (Result<PokemonHomeModel, APIError>) -> Void
 
-protocol pokeMonHomeRepositoryType: AnyObject {
-    func fetchpokeMonNames(completeion: @escaping pokeMonHomeScreenResult)
+protocol PokemonHomeRepositoryType: AnyObject {
+    func fetchPokemonNames(completeion: @escaping PokemonHomeScreenResult)
 }
 
-class pokeMonHomeScreenRepository: pokeMonHomeRepositoryType {
-    func fetchpokeMonNames(completeion: @escaping pokeMonHomeScreenResult) {
-        
-    }
+class PokemonHomeScreenRepository: PokemonHomeRepositoryType {
     private let apiHandler = APIHandler()
     
-    func fetchfetchPokeMon(completeion: @escaping pokeMonHomeScreenResult) {
-        apiHandler.request(endpoint: Endpoint.pokeMonNames, method: "GET", completion: completeion)
+    func fetchPokemonNames(completeion: @escaping PokemonHomeScreenResult) {
+        apiHandler.request(endpoint: Endpoint.pokemonNames, method: "GET", completion: completeion)
     }
 }

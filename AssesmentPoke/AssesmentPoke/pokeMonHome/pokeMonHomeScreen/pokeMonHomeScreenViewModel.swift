@@ -12,38 +12,36 @@ protocol ViewModelDelegate: AnyObject {
     func show(error: String)
 }
 
-class pokeMonHomeScreenViewModel {
+class PokemonHomeScreenViewModel {
     
-    var results: [pokeMonHomeModel]
-    private let repository: pokeMonHomeRepositoryType
+    var results: [PokemonResult] = []
+    private let repository: PokemonHomeRepositoryType
     private weak var delegate: ViewModelDelegate?
     
     
-    init(repository: pokeMonHomeRepositoryType, delegate: ViewModelDelegate) {
-        self.results = []
+    init(repository: PokemonHomeRepositoryType, delegate: ViewModelDelegate) {
         self.delegate = delegate
         self.repository = repository
     }
     
     var numberOfNames: Int {
-        results.count
+        return results.count
     }
     
-    func pokeMonNames(atIndex: Int) -> pokeMonHomeModel {
-        results[atIndex]
+    func pokeMonNames(atIndex index: Int) -> PokemonResult {
+        return results[index]
     }
         
-    func fetchpokeMonNames() {
-        repository.fetchpokeMonNames { [weak self] result in
+    func fetchPokemonNames() {
+        repository.fetchPokemonNames { [weak self] result in
             switch result {
-            case .success (let fetchpokeMonNames):
-                self?.results = fetchpokeMonNames
-                print("\(fetchpokeMonNames)")
+            case .success (let fetchPokemonNames):
+                self?.results = fetchPokemonNames.results
+                print("\(fetchPokemonNames)")
                 self?.delegate?.reloadView()
             case .failure (let error):
                 print("Oops! An error occured")
                 self?.delegate?.show(error: error.rawValue)
-                
             }
         }
     }

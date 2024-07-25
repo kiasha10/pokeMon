@@ -83,8 +83,8 @@
 		455D49952C50F70E00CC0D4B /* pokeMonHomeScreenRepository */ = {
 			isa = PBXGroup;
 			children = (
-				455D49902C50F6D500CC0D4B /* pokeMonHomeScreenRepository.swift */,
 				455D49912C50F6D500CC0D4B /* pokeMonHomeScreenModel.swift */,
+				455D49902C50F6D500CC0D4B /* pokeMonHomeScreenRepository.swift */,
 			);
 			name = pokeMonHomeScreenRepository;
 			sourceTree = "<group>";

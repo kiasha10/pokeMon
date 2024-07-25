@@ -7,41 +7,38 @@
 
 import UIKit
 
-class pokeMonHomeScreenViewController: UIViewController {
+class PokemonHomeScreenViewController: UIViewController {
+    
+    // MARK: IBOulets
+    
+    @IBOutlet weak var tableView: UITableView!
 
-// MARK: IB Oulets
+    private lazy var viewModel = PokemonHomeScreenViewModel (repository: PokemonHomeScreenRepository(), delegate: self)
     
-    @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var spinner: UIActivityIndicatorView!
     
-    private lazy var viewModel = pokeMonHomeScreenViewModel (repository: pokeMonHomeScreenRepository(), delegate: self)
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        viewModel.fetchpokeMonNames()
+        viewModel.fetchPokemonNames()
     }
     
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(pokeMonHomeScreenTableViewCell.tableViewNib(), forCellReuseIdentifier: TableViewIdentifiers.homeScreenIdentifier)
+        tableView.register(PokemonHomeScreenTableViewCell.tableViewNib(), forCellReuseIdentifier: TableViewIdentifiers.homeScreenIdentifier)
     }
 }
 
-extension pokeMonHomeScreenViewController: UITableViewDataSource, UITableViewDelegate {
+extension PokemonHomeScreenViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.numberOfNames
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewIdentifiers.homeScreenIdentifier) as? pokeMonHomeScreenTableViewCell
-        else {
-            return UITableViewCell()
-        }
-        let pokeMon = viewModel.results[indexPath.row]
-        cell.configure(pokeMonNames: pokeMon)
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewIdentifiers.homeScreenIdentifier, for: indexPath)
+        let pokemon = viewModel.results[indexPath.row]
+        cell.textLabel?.text = pokemon.name
+        
         return cell
     }
     
@@ -49,13 +46,12 @@ extension pokeMonHomeScreenViewController: UITableViewDataSource, UITableViewDel
         150
     }
 }
-
-extension pokeMonHomeScreenViewController: ViewModelDelegate {
+extension PokemonHomeScreenViewController: ViewModelDelegate {
     func reloadView() {
         self.tableView.reloadData()
-        self.spinner.isHidden = true
     }
     func show(error: String) {
         print(error)
     }
 }
+

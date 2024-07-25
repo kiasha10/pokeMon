@@ -7,16 +7,15 @@
 
 import Foundation
 
-struct pokeMonHomeModel : Codable {
-    let results: [results]
+struct PokemonHomeModel : Codable {
+    let count: Int
+    let previous: String?
+    let next: String?
+    let results: [PokemonResult]
 }
 
-struct results: Codable {
+struct PokemonResult: Codable {
     let name: String
     let url: String
-    
-    enum CodingKeys: String, CodingKey {
-        case name = "name"
-        case url = "url"
-    }
+
 }
