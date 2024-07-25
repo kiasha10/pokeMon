@@ -7,23 +7,54 @@
 
 import UIKit
 
-class pokeMonDetailsScreenViewController: UIViewController {
-
+class PokemonDetailsScreenViewController: UIViewController {
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    private lazy var viewModel = PokemonDetailsScreenViewModel (repository: PokemonDetailsScreenRepository(), delegate: self)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupTableView()
+        viewModel.fetchTypesOfSpecies()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(PokenmonDetailsScreenTableViewCell.tableViewNib(), forCellReuseIdentifier: TableViewIdentifiers.detailsScreenIdentifier)
     }
-    */
+}
 
+extension PokemonDetailsScreenViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.species
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewIdentifiers.detailsScreenIdentifier, for: indexPath)
+        let statistics = viewModel.details[indexPath.row]
+        cell.textLabel?.text = statistics.name
+
+        if let imageUrlString = viewModel.githubImageURL(for: indexPath.row),
+           let imageUrl = URL(string: imageUrlString) {
+            cell.imageView?.loadImage(from: imageUrl)
+
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        200
+    }
+}
+
+extension PokemonDetailsScreenViewController: ViewModelDelegate {
+    func reloadView() {
+        self.tableView.reloadData()
+    }
+    func show(error: String) {
+        print(error)
+    }
 }

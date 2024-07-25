@@ -25,7 +25,7 @@
             <connections>
                 <outlet property="pokemonImageView" destination="Qmf-dn-smJ" id="d7N-Wl-vKv"/>
             </connections>
-            <point key="canvasLocation" x="573.28244274809163" y="-177.81690140845072"/>
+            <point key="canvasLocation" x="547" y="-222"/>
         </tableViewCell>
     </objects>
 </document>

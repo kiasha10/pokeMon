@@ -20,3 +20,4 @@ class PokemonHomeScreenRepository: PokemonHomeRepositoryType {
         apiHandler.request(endpoint: Endpoint.pokemonNames, method: "GET", completion: completeion)
     }
 }
+

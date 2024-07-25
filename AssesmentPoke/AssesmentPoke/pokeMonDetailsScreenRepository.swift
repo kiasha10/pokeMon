@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+typealias PokemonDetailsScreenResult = (Result<PokemonDetailsModel, APIError>) -> Void
+
+protocol PokemonDetailsRepositoryType: AnyObject {
+    func fetchPokemonDetails(completion: @escaping PokemonDetailsScreenResult)
+}
+
+class PokemonDetailsScreenRepository: PokemonDetailsRepositoryType {
+    private let apiHandler = APIHandler()
+    
+    func fetchPokemonDetails(completion: @escaping PokemonDetailsScreenResult) {
+        apiHandler.request(endpoint: Endpoint.pokeMonSpecies, method: "GET", completion: completion)
+    }
+}
