@@ -1,45 +1,42 @@
 //
-//  pokeMonHomeScreenViewController.swift
+//  pokeMonDetailsScreenViewController.swift
 //  AssesmentPoke
 //
-//  Created by Kiasha Rangasamy on 2024/07/23.
+//  Created by Kiasha Rangasamy on 2024/07/25.
 //
 
 import UIKit
 
-class PokemonHomeScreenViewController: UIViewController {
+class PokemonDetailsScreenViewController: UIViewController {
     
-    // MARK: IBOulets
     
     @IBOutlet weak var tableView: UITableView!
-
-    private lazy var viewModel = PokemonHomeScreenViewModel (repository: PokemonHomeScreenRepository(), delegate: self)
     
+    private lazy var viewModel = PokemonDetailsScreenViewModel (repository: PokemonDetailsScreenRepository(), delegate: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        viewModel.fetchPokemonNames()
+        viewModel.fetchTypesOfSpecies()
     }
     
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(PokemonHomeScreenTableViewCell.tableViewNib(), forCellReuseIdentifier: TableViewIdentifiers.homeScreenIdentifier)
+        tableView.register(PokenmonDetailsScreenTableViewCell.tableViewNib(), forCellReuseIdentifier: TableViewIdentifiers.detailsScreenIdentifier)
     }
 }
 
-extension PokemonHomeScreenViewController: UITableViewDataSource, UITableViewDelegate {
+extension PokemonDetailsScreenViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.numberOfNames
+        viewModel.species
     }
-
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewIdentifiers.homeScreenIdentifier, for: indexPath)
-        let pokemon = viewModel.results[indexPath.row]
-        cell.textLabel?.text = pokemon.name
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewIdentifiers.detailsScreenIdentifier, for: indexPath)
+        let statistics = viewModel.details[indexPath.row]
+        cell.textLabel?.text = statistics.name
+
         if let imageUrlString = viewModel.githubImageURL(for: indexPath.row),
            let imageUrl = URL(string: imageUrlString) {
             cell.imageView?.loadImage(from: imageUrl)
@@ -49,10 +46,11 @@ extension PokemonHomeScreenViewController: UITableViewDataSource, UITableViewDel
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        150
+        200
     }
 }
-extension PokemonHomeScreenViewController: ViewModelDelegate {
+
+extension PokemonDetailsScreenViewController: ViewModelDelegate {
     func reloadView() {
         self.tableView.reloadData()
     }
@@ -60,4 +58,3 @@ extension PokemonHomeScreenViewController: ViewModelDelegate {
         print(error)
     }
 }
-

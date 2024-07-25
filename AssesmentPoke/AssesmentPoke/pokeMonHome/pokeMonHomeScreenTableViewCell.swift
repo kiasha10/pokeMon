@@ -23,10 +23,6 @@ class PokemonHomeScreenTableViewCell: UITableViewCell {
         contentView.layer.masksToBounds = true
     }
     
-//    func configure(pokemon: PokemonResult ) {
-//        pokemonNameLabel.text = pokemon.name
-//    }
-    
     static func tableViewNib() -> UINib {
         UINib(nibName: TableViewIdentifiers.homeScreenIdentifier, bundle: nil)
     }
