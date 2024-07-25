@@ -14,6 +14,7 @@
 		455D49932C50F6D500CC0D4B /* pokeMonHomeScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455D49912C50F6D500CC0D4B /* pokeMonHomeScreenModel.swift */; };
 		455D499B2C5117A500CC0D4B /* pokeMonHomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455D49992C5117A500CC0D4B /* pokeMonHomeScreen.storyboard */; };
 		455D499D2C5117DF00CC0D4B /* pokeMonHomeScreenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455D499C2C5117DF00CC0D4B /* pokeMonHomeScreenTableViewCell.xib */; };
+		455D49D22C524EA400CC0D4B /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455D49D12C524EA400CC0D4B /* ImageViewExtension.swift */; };
 		45C541512C4F99CE007E2D9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C541502C4F99CE007E2D9C /* AppDelegate.swift */; };
 		45C541532C4F99CE007E2D9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C541522C4F99CE007E2D9C /* SceneDelegate.swift */; };
 		45C541552C4F99CE007E2D9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C541542C4F99CE007E2D9C /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 		455D49912C50F6D500CC0D4B /* pokeMonHomeScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pokeMonHomeScreenModel.swift; sourceTree = "<group>"; };
 		455D49992C5117A500CC0D4B /* pokeMonHomeScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = pokeMonHomeScreen.storyboard; path = "../../../../../../../Downloads/pokeMon-feature-pokeMonHomeScreen/AssesmentPoke/AssesmentPoke/pokeMonHomeScreen/pokeMonHomeScreen.storyboard"; sourceTree = "<group>"; };
 		455D499C2C5117DF00CC0D4B /* pokeMonHomeScreenTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = pokeMonHomeScreenTableViewCell.xib; sourceTree = "<group>"; };
+		455D49D12C524EA400CC0D4B /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
 		45C5414D2C4F99CE007E2D9C /* AssesmentPoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssesmentPoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C541502C4F99CE007E2D9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45C541522C4F99CE007E2D9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 			name = pokeMonHomeScreenRepository;
 			sourceTree = "<group>";
 		};
+		455D49D02C524E7700CC0D4B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				455D49D12C524EA400CC0D4B /* ImageViewExtension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		45C541442C4F99CE007E2D9C = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +118,7 @@
 		45C5414F2C4F99CE007E2D9C /* AssesmentPoke */ = {
 			isa = PBXGroup;
 			children = (
+				455D49D02C524E7700CC0D4B /* Helpers */,
 				455D497B2C50DF5C00CC0D4B /* pokeMonHome */,
 				45C5416F2C4F9E60007E2D9C /* ServiceLayer */,
 				45C541502C4F99CE007E2D9C /* AppDelegate.swift */,
@@ -211,6 +222,7 @@
 				455D498B2C50F69E00CC0D4B /* pokeMonHomeScreenViewModel.swift in Sources */,
 				455D49922C50F6D500CC0D4B /* pokeMonHomeScreenRepository.swift in Sources */,
 				455D498F2C50F6BE00CC0D4B /* pokeMonHomeScreenTableViewCell.swift in Sources */,
+				455D49D22C524EA400CC0D4B /* ImageViewExtension.swift in Sources */,
 				45C541552C4F99CE007E2D9C /* ViewController.swift in Sources */,
 				45C541512C4F99CE007E2D9C /* AppDelegate.swift in Sources */,
 				45C541712C4F9E7F007E2D9C /* Service Errors.swift in Sources */,

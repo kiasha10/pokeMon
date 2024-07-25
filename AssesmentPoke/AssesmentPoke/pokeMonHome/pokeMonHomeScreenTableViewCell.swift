@@ -16,11 +16,16 @@ class PokemonHomeScreenTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        contentView.layer.cornerRadius = 40
+        contentView.layer.borderWidth = 10
+        contentView.layer.borderColor = UIColor.systemCyan.cgColor
+        contentView.layer.masksToBounds = true
     }
     
-    func configure(pokemon: PokemonResult ) {
-        pokemonNameLabel.text = pokemon.name
-    }
+//    func configure(pokemon: PokemonResult ) {
+//        pokemonNameLabel.text = pokemon.name
+//    }
     
     static func tableViewNib() -> UINib {
         UINib(nibName: TableViewIdentifiers.homeScreenIdentifier, bundle: nil)

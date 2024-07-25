@@ -39,6 +39,11 @@ extension PokemonHomeScreenViewController: UITableViewDataSource, UITableViewDel
         let pokemon = viewModel.results[indexPath.row]
         cell.textLabel?.text = pokemon.name
         
+        if let imageUrlString = viewModel.githubImageURL(for: indexPath.row),
+           let imageUrl = URL(string: imageUrlString) {
+            cell.imageView?.loadImage(from: imageUrl)
+
+        }
         return cell
     }
     

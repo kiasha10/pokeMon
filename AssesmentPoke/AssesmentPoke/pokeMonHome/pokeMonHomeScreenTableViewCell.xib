@@ -20,6 +20,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" red="0.63307774066925049" green="0.85512799024581909" blue="0.92386287450790405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             </tableViewCellContentView>
             <connections>
                 <outlet property="pokemonImageView" destination="Qmf-dn-smJ" id="d7N-Wl-vKv"/>
